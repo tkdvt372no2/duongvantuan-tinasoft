@@ -1,6 +1,11 @@
 import { FaCaretDown } from "react-icons/fa";
-import { FaWolfPackBattalion } from "react-icons/fa";
+import Wolf from "../../../public/wolf.png";
+import Market from "../../../public/market.png";
+import Workshop from "../../../public/workshop.png";
+import Learn from "../../../public/learn.png";
+import Token from "../../../public/token.png";
 import {
+  Button,
   Container,
   Flex,
   Image,
@@ -8,25 +13,43 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  Spacer,
   VStack,
 } from "@chakra-ui/react";
+import { color } from "framer-motion";
 interface ListItem {
   text: string;
   listItem: string[];
+  icon: any;
 }
 const MenuNav = (props: ListItem) => (
   <>
     <Flex direction={"row"} gap={2} alignItems={"center"}>
       <Menu>
-        <MenuButton color={"#7192b0"} fontSize={"16px"} fontWeight={700}>
+        <Image
+          color="#7192b0"
+          boxSize="22px"
+          src={props.icon}
+          alt="Dan Abramov"
+          _hover={{ color: "#fff" }}
+        />
+        <MenuButton
+          position={"relative"}
+          _hover={{ color: "#fff" }}
+          color={"#7192b0"}
+          fontSize={"15px"}
+          fontWeight={700}
+        >
           {props.text.toUpperCase() || "loading"}
         </MenuButton>
-        <MenuList>
+        <MenuList borderColor={"#7192b0"} left={"-19px"} bg={"#0f1b27"} position={"absolute"}>
           {props.listItem.map((item) => (
-            <MenuItem>{item}</MenuItem>
+            <MenuItem bg={"#0f1b27"} _hover={{bg:"#7192b0"}} color={"white"}>
+              {item}
+            </MenuItem>
           ))}
         </MenuList>
-        <FaCaretDown color={"#7192b0"} />
+        <FaCaretDown style={{ marginLeft: -5 }} color={"#7192b0"} />
       </Menu>
     </Flex>
   </>
@@ -37,6 +60,7 @@ const Header: React.FC = () => {
       <Container
         position={"fixed"}
         minWidth="100vw"
+        display={["none", "none", "block", "block"]}
         bg="#0f1b27"
         color="#0a0a0a"
         height={"100px"}
@@ -48,11 +72,37 @@ const Header: React.FC = () => {
             src="../../../public/logo2.png"
             alt="DVT"
           />
-          <MenuNav text="EXPANSIONS" listItem={["Download", "Hello"]} />
-          <MenuNav text="MARKET" listItem={["About", "Hello"]} />
-          <MenuNav text="WORKSHOP" listItem={["Contact", "Hello"]} />
-          <MenuNav text="LEARN" listItem={["Download", "Hello"]} />
-          <MenuNav text="$GODs TOKEN" listItem={["Download", "Hello"]} />
+          <MenuNav
+            text="EXPANSIONS"
+            listItem={["Download", "Hello"]}
+            icon={Wolf}
+          />
+          <MenuNav text="MARKET" listItem={["About", "Hello"]} icon={Market} />
+          <MenuNav
+            text="WORKSHOP"
+            listItem={["Contact", "Hello"]}
+            icon={Workshop}
+          />
+          <MenuNav text="LEARN" listItem={["Download", "Hello"]} icon={Learn} />
+          <MenuNav
+            text="$GODs TOKEN"
+            listItem={["Download", "Hello"]}
+            icon={Token}
+          />
+          <Spacer />
+          <Flex gap={10} padding={10}>
+            <Button fontSize={20} _hover={{color:"white"}} color="#7192b0" variant="link">
+              CREATE ACCOUNT
+            </Button>
+            <Button
+              fontSize={20}
+              _hover={{ bg: "#ebedf0", borderColor: "#7192b0", scale: 1.1 }}
+              color="#7192b0"
+              variant="outline"
+            >
+              LOGIN
+            </Button>
+          </Flex>
         </Flex>
       </Container>
     </VStack>
