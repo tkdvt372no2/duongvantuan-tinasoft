@@ -21,24 +21,26 @@ const Banner: React.FC = () => {
       borderColor={"#ebc98b "}
     >
       <Box pos={"absolute"} left={10}>
-      <VStack tabIndex={1} color={"red"} _active={"action"}>
-        <Box>
-          <Flex textUnderlineOffset={0}>
-            <Box>
-              <Image
-                h={150}
-                w={157}
-                src="https://assets-global.website-files.com/64ea43aceab444bc09b7482e/653a190e3ccb4674d79a5136_6507948f9d60b1182ef1ea42_logo_a1_render%20(2)-p-500.png"
-              ></Image>
-              <VStack>
-                <Box></Box>
-              </VStack>
-            </Box>
-          </Flex>
-        </Box>
-      </VStack>
-    </Box>
-      <ButtonPrimary />
+        <VStack tabIndex={1} color={"red"} _active={"action"}>
+          <Box>
+            <Flex textUnderlineOffset={0}>
+              <Box>
+                <Image
+                  h={150}
+                  w={157}
+                  src="https://assets-global.website-files.com/64ea43aceab444bc09b7482e/653a190e3ccb4674d79a5136_6507948f9d60b1182ef1ea42_logo_a1_render%20(2)-p-500.png"
+                ></Image>
+                <VStack>
+                  <Box></Box>
+                </VStack>
+              </Box>
+            </Flex>
+          </Box>
+        </VStack>
+      </Box>
+      <Box position={"absolute"} right={10} top={"60%"}>
+        <ButtonPrimary text={"FIND OUT MORE"} />
+      </Box>
     </Container>
   );
 };
