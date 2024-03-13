@@ -16,9 +16,9 @@ const Banner: React.FC = () => {
       }
       bgPosition={"50%"}
       bgSize={"cover"}
-      borderWidth={3}
+      borderBottomWidth={5}
       tabIndex={23}
-      borderColor={"#ebc98b "}
+      borderBottomColor={"#ebc98b "}
     >
       <Box pos={"absolute"} left={10}>
         <VStack tabIndex={1} color={"red"} _active={"action"}>

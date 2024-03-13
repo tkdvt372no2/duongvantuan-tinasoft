@@ -1,6 +1,6 @@
 import { Container } from "@chakra-ui/react";
 import Header from "./components/Home/Header";
-import Toggletheme from "./subcomponents/toggletheme";
+import Toggletheme from "./subcomponents/Toggletheme";
 import Footer from "./components/Home/Footer";
 import "./App.css";
 import Banner from "./components/Home/Banner";
