@@ -67,6 +67,8 @@ const ButtonPrimary: React.FC<{ text: string }> = ({ text }) => {
           fontWeight={700}
           fontSize={"1.125rem"}
           position={"relative"}
+          fontFamily={`"Roboto Slab", serif`}
+          fontStyle={"normal"}
           textTransform={"uppercase"}
         >
           {text}

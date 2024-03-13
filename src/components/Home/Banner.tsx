@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Image, VStack } from "@chakra-ui/react";
+import { Box, Container, Flex, Image, Text, VStack } from "@chakra-ui/react";
 import ButtonPrimary from "../../subcomponents/ButtonPrimary";
 
 const Banner: React.FC = () => {
@@ -38,6 +38,21 @@ const Banner: React.FC = () => {
           </Box>
         </VStack>
       </Box>
+      <Text
+        fontFamily={`"Roboto Slab", serif`}
+        fontWeight={700}
+        fontStyle={"normal"}
+        textShadow={"0 2px 10px #0a0a0a"}
+        fontSize={"2rem"}
+        position={"absolute"}
+        right={"10"}
+        top={"10%"}
+      >
+        New Set: Tides of Fate!
+      </Text>
+      <Text position={"absolute"} fontSize={"1.5em"} right={10} top={"35%"}>
+        Now Available!
+      </Text>
       <Box position={"absolute"} right={10} top={"60%"}>
         <ButtonPrimary text={"FIND OUT MORE"} />
       </Box>

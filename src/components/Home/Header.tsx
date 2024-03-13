@@ -62,7 +62,7 @@ const Header: React.FC = () => {
   return (
     <VStack>
       <Container
-        zIndex={1}
+        zIndex={99}
         position={"fixed"}
         minWidth="100vw"
         display={["none", "none", "block", "block"]}
