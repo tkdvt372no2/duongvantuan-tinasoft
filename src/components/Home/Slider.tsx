@@ -4,22 +4,21 @@ import ButtonPrimary from "../../subcomponents/ButtonPrimary";
 const Slider: React.FC = () => {
   return (
     <Container
-      minWidth={"100vw"}
+      minWidth={"100%"}
+      maxWidth={"md"}
       bgSize={"cover"}
       borderBottomWidth={5}
-      tabIndex={23}
+      m={0}
+      p={0}
       borderBottomColor={"#ebc98b"}
-      margin={0}
-      padding={0}
       position={"relative"}
-      overflow={"hidden"}
+      overflowX={"auto"}
     >
       <ReactPlayer
-        style={{ marginTop: -50 }}
-        width={"100vw"}
+        width={"100%"}
         height={"auto"}
-        playsinline
         muted
+        loop={true}
         playing={true}
         url="https://assets-global.website-files.com/64def6e5a3fa6068102b4f00/6571136fa3d18044243b4bea_gu_loopingvideo3 (720p)-transcode.mp4"
       />
@@ -70,7 +69,7 @@ const Slider: React.FC = () => {
         position={"absolute"}
         left={"50%"}
         transform={"translate(-50%, -50%)"}
-          bottom={"10%"}
+        bottom={"10%"}
       >
         <ButtonPrimary text={"PLAY NOW"} />
       </Box>

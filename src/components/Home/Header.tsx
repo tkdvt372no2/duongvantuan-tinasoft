@@ -4,6 +4,7 @@ import Market from "../../../public/market.png";
 import Workshop from "../../../public/workshop.png";
 import Learn from "../../../public/learn.png";
 import Token from "../../../public/token.png";
+import { Link } from "react-router-dom";
 import {
   Button,
   Container,
@@ -77,7 +78,7 @@ const Header: React.FC = () => {
             src="../../../public/logo2.png"
             alt="DVT"
           />
-        
+
           <MenuNav
             text="EXPANSIONS"
             listItem={["Download", "Hello"]}
@@ -90,8 +91,7 @@ const Header: React.FC = () => {
             listItem={["Contact", "Hello"]}
             icon={Workshop}
           />
-          <MenuNav text="LEARN" 
-          listItem={["Download", "Hello"]} icon={Learn} />
+          <MenuNav text="LEARN" listItem={["Download", "Hello"]} icon={Learn} />
           <MenuNav
             text="$GODs TOKEN"
             listItem={["Download", "Hello"]}
@@ -104,18 +104,19 @@ const Header: React.FC = () => {
               _hover={{ color: "white" }}
               color="#fff"
               variant="link"
-              
             >
               CREATE ACCOUNT
             </Button>
-            <Button
-              fontSize={20}
-              _hover={{ bg: "#ebedf0", borderColor: "#7192b0", scale: 1.1 }}
-              color="#7192b0"
-              variant="outline"
-            >
-              LOGIN
-            </Button>
+            <Link to="/login">
+              <Button
+                fontSize={20}
+                _hover={{ bg: "#ebedf0", borderColor: "#7192b0", scale: 1.1 }}
+                color="#7192b0"
+                variant="outline"
+              >
+                LOGIN
+              </Button>
+            </Link>
           </Flex>
         </Flex>
       </Container>

@@ -5,13 +5,15 @@ import Footer from "./components/Home/Footer";
 import "./App.css";
 import Banner from "./components/Home/Banner";
 import Slider from "./components/Home/Slider";
+import VideoDetail from "./components/Home/VideoDetail";
 function App() {
   return (
-    <Container minWidth="100vw" p={0} m={0}>
+    <Container maxWidth="100vw" p={0} m={0}>
       <Toggletheme />
       <Header />
       <Banner />
-      <Slider/>
+      <Slider />
+      <VideoDetail />
       <Footer />
     </Container>
   );

@@ -1,9 +1,10 @@
+import { Container } from "@chakra-ui/react";
 import React from "react";
 
 const Footer: React.FC = () => {
-  return <section style={{ height: "100vh" }}>
+  return <Container>
     
-  </section>;
+  </Container>;
 };
 
 export default Footer;
