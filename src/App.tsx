@@ -6,6 +6,7 @@ import "./App.css";
 import Banner from "./components/Home/Banner";
 import Slider from "./components/Home/Slider";
 import VideoDetail from "./components/Home/VideoDetail";
+import Step from "./components/Home/Step";
 function App() {
   return (
     <Container maxWidth="100vw" p={0} m={0}>
@@ -14,6 +15,7 @@ function App() {
       <Banner />
       <Slider />
       <VideoDetail />
+      <Step />
       <Footer />
     </Container>
   );

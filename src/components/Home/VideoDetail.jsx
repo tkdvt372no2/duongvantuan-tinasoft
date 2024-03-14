@@ -1,6 +1,6 @@
 import { Text, Box, Container, Image } from "@chakra-ui/react";
 import ReactPlayer from "react-player";
-import ButtonPrimary from './../../subcomponents/ButtonPrimary';
+import ButtonPrimary from "./../../subcomponents/ButtonPrimary";
 const VideoDetail = () => {
   return (
     <Container
@@ -8,6 +8,8 @@ const VideoDetail = () => {
         "https://assets-global.website-files.com/64ea43aceab444bc09b7482e/653a62f9627257656570c7a3_Valka_LC_BG.jpg"
       }
       backgroundPosition={"70% 10%"}
+      borderBottomWidth={5}
+      borderBottomColor={"#ebc98b"}
       maxWidth={"99vw"}
       h={"900"}
       bgSize={"cover"}
@@ -82,9 +84,8 @@ const VideoDetail = () => {
             style={{ position: "relative", zIndex: 3 }}
             width={"100%"}
             height={"100%"}
-            muted
+            controls={true}
             loop={true}
-            playing={true}
             url="https://www.youtube.com/watch?v=cDESNiMi-i4"
           />
         </Box>
